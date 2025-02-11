@@ -22,7 +22,7 @@ title_separator: "-"
 subtitle: # 사이트 제목 아래에 나타나는 사이트 태그라인
 name: "박덕기"
 description: "웹 프로그래머의 정석"
-url: "https://Deokgi-Park.github.io"
+url: "https://deokgi-park.github.io"
 baseurl: # 사이트의 하위 경로, 예: "/blog"
 repository: "Deokgi-Park"
 teaser: "/assets/images/danggo.jpg"
