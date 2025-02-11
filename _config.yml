@@ -310,3 +310,12 @@ defaults:
       comments: true
       share: true
       related: true
+
+# 네비게이션 설정
+navigation:
+  - title: "Home"
+    url: "/"
+  - title: "About"
+    url: "/about/"
+  - title: "Blog"
+    url: "/blog/"
