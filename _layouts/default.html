@@ -13,16 +13,8 @@
   </head>
 
   <body class="layout--{{ page.layout | default: layout.layout }}{% if page.classes or layout.classes %}{{ page.classes | default: layout.classes | join: ' ' | prepend: ' ' }}{% endif %}" dir="{% if site.rtl %}rtl{% else %}ltr{% endif %}">
-    <ins class="adsbygoogle"
-    style="display:inline-block;width:728px;height:90px"
-    data-ad-client="ca-pub-1234567890123456"
-    data-ad-slot="1234567890"></ins>
-    <script>
-    (adsbygoogle = window.adsbygoogle || []).push({});
-    </script>
     {% include_cached skip-links.html %}
     {% include_cached masthead.html %}
-
     <div class="initial-content">
       {{ content }}
       {% include after-content.html %}
