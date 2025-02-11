@@ -113,7 +113,7 @@ analytics:
 # 사이트 저자
 author:
   name: "러버덕"
-  avatar: "/assets/images/loverDeok.jpg" # 아바타 이미지 경로, 예: "/assets/images/bio-photo.jpg"
+  avatar: "/assets/images/myAi.jpg" # 아바타 이미지 경로, 예: "/assets/images/bio-photo.jpg"
   bio: "I am an **amazing** person."
   location: "Somewhere"
   email:
