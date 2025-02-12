@@ -7,3 +7,28 @@ search: false
 
 @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
 @import "minimal-mistakes"; // main partials
+
+@font-face {
+  font-family: "MBC";
+  src: url("/assets/fonts/MBC_1961_M.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "D2Coding";
+  src: url("/assets/fonts/D2Coding.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "DungGeunMo";
+  src: url("/assets/fonts/DungGeunMo.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Galmuri14";
+  src: url("/assets/fonts/Galmuri14.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}

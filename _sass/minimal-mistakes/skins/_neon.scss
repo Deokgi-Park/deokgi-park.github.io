@@ -4,11 +4,11 @@
 
 /* Colors */
 $background-color: #141010 !default;
-$text-color: #fff6fb !default;
+$text-color: #ffffff !default;
 $primary-color: #f21368 !default;
 $border-color: mix(#fff, $background-color, 20%) !default;
-$code-background-color: mix(#000, $background-color, 15%) !default;
-$code-background-color-dark: mix(#000, $background-color, 20%) !default;
+$code-background-color: #f21368 !default;
+$code-background-color-dark: #f21368 !default;
 $form-background-color: mix(#000, $background-color, 15%) !default;
 $footer-background-color: mix($primary-color, #000, 10%) !default;
 $link-color: $primary-color !default;
@@ -23,13 +23,13 @@ $notice-background-mix: 90% !default;
 $code-notice-background-mix: 95% !default;
 
 /* neon syntax highlighting (base16) */
-$base00: #000 !default;
+$base00: #000000 !default;
 $base01: #e0e0e0 !default;
 $base02: #d0d0d0 !default;
 $base03: #b0b0b0 !default;
-$base04: #000000 !default;
-$base05: #fff8fc !default;
-$base06: #151515 !default;
+$base04: #efefef !default;
+$base05: #eaeaea !default;
+$base06: #e9e9e9 !default;
 $base07: #202020 !default;
 $base08: #ff0086 !default;
 $base09: #fd8900 !default;
@@ -39,6 +39,10 @@ $base0c: #1faaaa !default;
 $base0d: #3777e6 !default;
 $base0e: #ad00a1 !default;
 $base0f: #cc6633 !default;
+
+code {
+  font-weight: bold;
+}
 
 .author__urls.social-icons i,
 .author__urls.social-icons .svg-inline--fa,
