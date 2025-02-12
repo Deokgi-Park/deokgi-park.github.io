@@ -502,6 +502,7 @@
      ========================================================================== */
 
 .toc {
+  position: fixed; // 250212_PDG_사이드바 고정으로 수정
   font-family: $sans-serif-narrow;
   color: $gray;
   background-color: $background-color;
