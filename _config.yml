@@ -18,8 +18,8 @@ minimal_mistakes_skin: "neon" # "air", "aqua", "contrast", "dark", "dirt", "neon
 locale: "ko-KR"
 rtl: # true, false (기본값) # RTL 언어를 위해 페이지 방향을 오른쪽에서 왼쪽으로 변경합니다.
 title: "어떤 고무오리의 개발 블로그"
-title_separator: "-"
-subtitle: # 사이트 제목 아래에 나타나는 사이트 태그라인
+title_separator: "||" # 사이트 제목과 페이지 제목 사이에 사용할 구분 기호
+subtitle: "흔한 러버덕의 디버깅 블로그" # 사이트 제목 아래에 나타나는 사이트 태그라인
 name: "러버덕"
 description: "웹 프로그래머의 정석"
 url: "https://deokgi-park.github.io"
@@ -221,7 +221,7 @@ sass:
 
 # 출력
 permalink: /:categories/:title/
-timezone: # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+timezone: Asia/Seoul # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 
 # jekyll-paginate를 사용한 페이지 매김
 paginate: 5 # 표시할 게시물 수
