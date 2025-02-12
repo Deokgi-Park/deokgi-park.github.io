@@ -45,8 +45,8 @@ comments:
     num_posts: # 5 (기본값)
     colorscheme: # "light" (기본값), "dark"
   utterances:
-    theme: "github-dark" # "github-light" (기본값), "github-dark"
-    issue_term: # "pathname" (기본값)
+    theme: "icy-dark" # "github-light" (기본값), "github-dark"
+    issue_term: "pathname" # "pathname" (기본값)
   giscus:
     repo_id: # https://giscus.app에서 설정 중 표시됨
     category_name: # 카테고리의 전체 텍스트 이름
