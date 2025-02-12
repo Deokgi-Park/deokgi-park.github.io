@@ -503,7 +503,7 @@
 
 .toc {
   // 250212_PDG_사이드바 고정으로 수정 start
-  @media screen and (max-width: 1024) {
+  @media screen and (min-width: 1024) {
     position: fixed;
   }
   // 250212_PDG_사이드바 고정으로 수정 end
