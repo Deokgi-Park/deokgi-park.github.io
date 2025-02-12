@@ -1,12 +1,4 @@
 <div class="page__comments">
-  <script
-    src="https://utteranc.es/client.js"
-    repo="Deokgi-Park/deokgi-park.github.io"
-    issue-term="pathname"
-    theme="github-dark"
-    crossorigin="anonymous"
-    async
-  ></script>
   {% capture comments_label %}{{ site.data.ui-text[site.locale].comments_label |
   default: "Comments" }}{% endcapture %} {% case site.comments.provider %} {%
   when "discourse" %}
