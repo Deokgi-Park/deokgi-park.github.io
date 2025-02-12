@@ -114,8 +114,8 @@ analytics:
 author:
   name: "러버덕"
   avatar: "/assets/images/myAi.jpg" # 아바타 이미지 경로, 예: "/assets/images/bio-photo.jpg"
-  bio: "I am an **amazing** person."
-  location: "Somewhere"
+  bio: "듣고 말하고 디버깅하는 **러버덕**"
+  location: "경기도 용인시 수지구"
   email:
   links:
     - label: "Email"
