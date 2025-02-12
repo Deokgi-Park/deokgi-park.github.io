@@ -1,6 +1,6 @@
 ---
 layout: posts
-title: "About"
+title: "contact"
 permalink: /contact/
 ---
 

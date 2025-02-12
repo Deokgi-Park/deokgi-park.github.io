@@ -297,6 +297,12 @@ compress_html:
   ignore:
     envs: development
 
+# collections 테스트
+collections:
+  portfolio:
+    output: true
+    permalink: /:collection/:path/
+
 # 기본값
 defaults:
   # _posts
@@ -310,3 +316,10 @@ defaults:
       comments: true
       share: true
       related: true
+  - scope:
+      path: ""
+      type: portfolio
+    values:
+      layout: single
+      author_profile: false
+      share: true
