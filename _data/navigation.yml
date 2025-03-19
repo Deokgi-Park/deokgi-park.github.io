@@ -8,6 +8,8 @@ main:
     url: /portfolio/
   - title: "contact"
     url: /contact/
+  - title: "categories"
+    url: /categories/
 
 sidebar-category:
   - title: "카테고리"
