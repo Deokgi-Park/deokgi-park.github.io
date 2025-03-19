@@ -34,9 +34,9 @@ enable_copy_code_button: true # true, false (기본값)
 copyright: # "copyright" 이름, 기본값은 site.title
 copyright_url: # "copyright" URL, 기본값은 site.url
 comments:
-  provider: "utterances" # false (기본값), "disqus", "discourse", "facebook", "staticman", "staticman_v2", "utterances", "giscus", "custom"
+  provider: "disqus" # false (기본값), "disqus", "discourse", "facebook", "staticman", "staticman_v2", "utterances", "giscus", "custom"
   disqus:
-    shortname: # https://help.disqus.com/customer/portal/articles/466208-what-s-a-shortname-
+    shortname: "deokgi-park" # https://disqus.com/에서 설정 중 표시됨
   discourse:
     server: # https://meta.discourse.org/t/embedding-discourse-comments-via-javascript/31963 , 예: meta.discourse.org
   facebook:

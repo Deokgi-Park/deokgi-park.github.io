@@ -1,0 +1,3 @@
+# ruby GCC 등의 환경 설정 필요
+
+bundle exec jekyll serve
