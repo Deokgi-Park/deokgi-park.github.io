@@ -20,6 +20,30 @@ main:
     url: https://google.com
     target: _blank
 
+docs:
+  - title: "Quick-Start Guide"
+    url: https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/
+  - title: "Layouts"
+    url: https://mmistakes.github.io/minimal-mistakes/docs/layouts/
+  - title: "Components"
+    url: https://mmistakes.github.io/minimal-mistakes/docs/components/
+  - title: "Utilities"
+    url: https://mmistakes.github.io/minimal-mistakes/docs/utilities/#
+
+# 다음과 같이 카테고리 추가 가능
+# 사용방법 예제
+# ---
+# sidebar:
+#   nav: "sidebar-category"
+# ---
+# 네비가 아닌 사이드바 사용 예제
+# sidebar:
+#   - title: "Role"
+#     image: http://placehold.it/350x250
+#     image_alt: "logo"
+#     text: "Designer, Front-End Developer"
+#   - title: "Responsibilities"
+#     text: "Reuters try PR stupid commenters should isn't a business model"
 sidebar-category:
   - title: "카테고리"
     children:

@@ -1,20 +1,95 @@
+<style>
+  .entries-list .archive__item {
+    opacity: 0;
+    transform: translateX(-100%); /* 처음에 왼쪽 밖에 위치 */
+    animation: slideIn 1s ease-in-out forwards; /* 애니메이션 설정 */
+  }
+  .search-content__inner-wrap .list__item {
+    opacity: 0;
+    transform: translateX(-100%); /* 처음에 왼쪽 밖에 위치 */
+    animation: slideIn 1.8s ease-in-out forwards; /* 애니메이션 설정 */
+  }
+  .search-content__inner-wrap .list__item:nth-child(1) {
+    opacity: 0;
+    transform: translateX(-100%); /* 처음에 왼쪽 밖에 위치 */
+    animation: slideIn 1.2s ease-in-out forwards; /* 애니메이션 설정 */
+  }
+  .search-content__inner-wrap .list__item:nth-child(2) {
+    opacity: 0;
+    transform: translateX(-100%); /* 처음에 왼쪽 밖에 위치 */
+    animation: slideIn 1.4s ease-in-out forwards; /* 애니메이션 설정 */
+  }
+  .search-content__inner-wrap .list__item:nth-child(3) {
+    opacity: 0;
+    transform: translateX(-100%); /* 처음에 왼쪽 밖에 위치 */
+    animation: slideIn 1.6s ease-in-out forwards; /* 애니메이션 설정 */
+  }
+  .search-content__inner-wrap .list__item:nth-child(4) {
+    opacity: 0;
+    transform: translateX(-100%); /* 처음에 왼쪽 밖에 위치 */
+    animation: slideIn 1.8s ease-in-out forwards; /* 애니메이션 설정 */
+  }
+  @keyframes slideIn {
+    0% {
+      opacity: 0;
+      transform: translateX(-100%); /* 왼쪽에서 시작 */
+    }
+    70% {
+      opacity: 0.2;
+      transform: translateX(0); /* 중간에 요소가 나타나도록 */
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0); /* 끝에서 요소가 완전히 보이도록 */
+    }
+  }
+
+  .archive__item-teaser img {
+    width: 50%;
+  }
+  .archive__item-excerpt {
+    font-size: 1rem;
+  }
+</style>
+
 <div class="search-content__inner-wrap">
-  {%- assign search_provider = site.search_provider | default: "lunr" -%}
-  {%- case search_provider -%}
-  {%- when "lunr" -%}
-  <form class="search-content__form" onkeydown="return event.key != 'Enter';" role="search">
+  {%- assign search_provider = site.search_provider | default: "lunr" -%} {%-
+  case search_provider -%} {%- when "lunr" -%}
+  <form
+    class="search-content__form"
+    onkeydown="return event.key != 'Enter';"
+    role="search"
+  >
     <label class="sr-only" for="search">
-      {{ site.data.ui-text[site.locale].search_label_text | default: 'Enter your search term...' }}
+      {{ site.data.ui-text[site.locale].search_label_text | default: 'Enter your
+      search term...' }}
     </label>
-    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="{{ site.data.ui-text[site.locale].search_placeholder_text | default: 'Enter your search term...' }}" />
+    <input
+      type="search"
+      id="search"
+      class="search-input"
+      tabindex="-1"
+      placeholder="{{ site.data.ui-text[site.locale].search_placeholder_text | default: 'Enter your search term...' }}"
+    />
   </form>
   <div id="results" class="results"></div>
   {%- when "google" -%}
-  <form onsubmit="return googleCustomSearchExecute();" id="cse-search-box-form-id" role="search">
+  <form
+    onsubmit="return googleCustomSearchExecute();"
+    id="cse-search-box-form-id"
+    role="search"
+  >
     <label class="sr-only" for="cse-search-input-box-id">
-      {{ site.data.ui-text[site.locale].search_label_text | default: 'Enter your search term...' }}
+      {{ site.data.ui-text[site.locale].search_label_text | default: 'Enter your
+      search term...' }}
     </label>
-    <input type="search" id="cse-search-input-box-id" class="search-input" tabindex="-1" placeholder="{{ site.data.ui-text[site.locale].search_placeholder_text | default: 'Enter your search term...' }}" />
+    <input
+      type="search"
+      id="cse-search-input-box-id"
+      class="search-input"
+      tabindex="-1"
+      placeholder="{{ site.data.ui-text[site.locale].search_placeholder_text | default: 'Enter your search term...' }}"
+    />
   </form>
   <div id="results" class="results">
     <gcse:searchresults-only></gcse:searchresults-only>

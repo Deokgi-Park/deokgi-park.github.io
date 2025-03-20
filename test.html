@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Animated Scrollbar</title>
+    <style>
+      /* 전체 페이지 스타일 */
+      body {
+        height: 200vh; /* 긴 페이지로 스크롤 필요 */
+        background: linear-gradient(to bottom, #f0f0f0, #ddd);
+        margin: 0;
+        font-family: Arial, sans-serif;
+      }
+
+      /* 스크롤바 스타일 */
+      ::-webkit-scrollbar {
+        width: 12px; /* 스크롤바 너비 */
+      }
+
+      /* 스크롤바 트랙 (배경) */
+      ::-webkit-scrollbar-track {
+        background: #f0f0f0;
+      }
+
+      /* 스크롤바 핸들 (움직이는 부분) */
+      ::-webkit-scrollbar-thumb,
+      div,
+      p {
+        border-radius: 6px;
+        background: linear-gradient(90deg, #ff5733, #33c1ff, #8e44ad);
+        animation: scrollThumbColorChange 3s infinite; /* 색상 애니메이션 */
+      }
+
+      /* 애니메이션 정의 */
+      @keyframes scrollThumbColorChange {
+        0% {
+          background: #ff5733; /* 오렌지 */
+        }
+        33% {
+          background: #33c1ff; /* 파랑 */
+        }
+        66% {
+          background: #8e44ad; /* 보라 */
+        }
+        100% {
+          background: #ff5733; /* 원래 색상으로 돌아옴 */
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Scroll Down to See the Animated Scrollbar</h1>
+    <p style="margin: 20px">
+      This example demonstrates an animated scrollbar color change using CSS.
+    </p>
+    <div width="50" height="50"></div>
+  </body>
+</html>

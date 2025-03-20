@@ -1,6 +1,34 @@
 /* ==========================================================================
    SINGLE PAGE/POST
    ========================================================================== */
+// 스크롤 바 커스텀 2025.03.20 start
+html {
+  width: calc(100vw - 8px);
+  scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  outline: none;
+  border-radius: 8px;
+  background: -webkit-linear-gradient(
+    75deg,
+    #afffe4,
+    #b7e396,
+    #ffeea9,
+    #ffc19c,
+    #ff9bcd
+  );
+  transition: colorChange 0.5s ease, transform 0.3s ease;
+}
+
+::-webkit-scrollbar-track {
+  background-color: rgba(0, 0, 0, 0);
+}
+// 스크롤 바 커스텀 2025.03.20 end
 
 #main {
   @include clearfix;
