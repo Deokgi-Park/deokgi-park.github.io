@@ -40,25 +40,27 @@ h1 {
 
 h2 {
   font-size: $h-size-2;
-  text-indent: 2px;
+  text-indent: 1px;
 }
 
 h3 {
   font-size: $h-size-3;
-  text-indent: 3px;
+  text-indent: 2px;
 }
 
 h4 {
   font-size: $h-size-4;
-  text-indent: 5px;
+  text-indent: 4px;
 }
 
 h5 {
   font-size: $h-size-5;
+  text-indent: 8px;
 }
 
 h6 {
   font-size: $h-size-6;
+  text-indent: 8px;
 }
 
 small,
