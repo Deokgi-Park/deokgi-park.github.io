@@ -110,8 +110,9 @@ blockquote {
   margin-block: 2em;
   margin-inline-end: 1em;
   padding-inline: 1em;
-  font-style: italic;
+  // font-style: italic;
   border-inline-start: 0.25em solid $primary-color;
+  font-size: 14px;
 
   cite {
     font-style: italic;
