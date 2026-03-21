@@ -59,9 +59,15 @@ $default-monospace: Monaco, Consolas, "Lucida Console", monospace;
 /* Emoji native from modern font stack - add to the end of the font-face for native emojis */
 $emoji-native: 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
 
+/* Custom fonts */
+//$custom-font: "MBC";
+//$custom-font: "D2Coding";
+//$custom-font: "DungGeunMo";
+$custom-font: "Galmuri14";
+
 /* system typefaces */
 $serif: $default-serif !default;
-$sans-serif: $default-sans-serif !default;
+$sans-serif: $custom-font, $default-sans-serif !default;
 $sans-serif-narrow: $sans-serif !default;
 $monospace: $default-monospace !default;
 
