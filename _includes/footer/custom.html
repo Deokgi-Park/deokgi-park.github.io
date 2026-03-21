@@ -6,4 +6,37 @@
     alt="[Valid RSS]"
     title="Validate my RSS feed"
 /></a>
+<!-- <script>
+  // Fix: greedy nav measureLinks() 강제 재실행
+  // 폰트 로드 전에 너비 측정이 완료되면 breakWidths가 잘못 계산되어 About 등이 사라지는 문제 수정
+  if (document.fonts && document.fonts.ready) {
+    console.log("[greedy-fix] document.fonts.ready 대기 중...");
+    document.fonts.ready.then(function () {
+      console.log("[greedy-fix] 폰트 로드 완료");
+
+      if (!document.querySelector("nav.greedy-nav")) {
+        console.log("[greedy-fix] nav.greedy-nav 없음 → 종료");
+        return;
+      }
+
+      var curW = $(window).width();
+      var fakeW = curW < 768 ? 900 : 500;
+      console.log("[greedy-fix] 현재 너비:", curW, "/ 가짜 너비:", fakeW);
+
+      var orig = $.fn.width;
+      $.fn.width = function () {
+        if (this[0] === window) return fakeW;
+        return orig.apply(this, arguments);
+      };
+      console.log("[greedy-fix] $.fn.width 교체 완료 → resize 트리거 (measureLinks 강제 실행)");
+      $(window).trigger("resize");
+
+      $.fn.width = orig;
+      console.log("[greedy-fix] $.fn.width 복원 완료 → resize 트리거 (check 재실행)");
+      $(window).trigger("resize");
+
+      console.log("[greedy-fix] 완료");
+    });
+  }
+</script> -->
 <!-- end custom footer snippets -->
