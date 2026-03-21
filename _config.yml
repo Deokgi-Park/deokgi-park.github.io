@@ -163,6 +163,8 @@ footer:
 include:
   - .htaccess
   - _pages
+  # Chrome DevTools가 로컬에서 요청하는 /.well-known/appspecific/com.chrome.devtools.json 404 로그를 줄이기 위해 포함
+  - .well-known
 exclude:
   - "*.sublime-project"
   - "*.sublime-workspace"
@@ -302,6 +304,9 @@ collections:
   portfolio:
     output: true
     permalink: /:collection/:path/
+  sample:
+    output: true
+    permalink: /:collection/:path/
 
 # 기본값
 defaults:
@@ -324,3 +329,11 @@ defaults:
       layout: single
       author_profile: false
       share: true
+  # _sample
+  - scope:
+      path: ""
+      type: sample
+    values:
+      layout: single
+      author_profile: false
+      share: false

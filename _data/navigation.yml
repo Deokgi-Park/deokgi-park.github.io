@@ -1,7 +1,8 @@
 # main links
 main:
-  - title: "Quick-Start Guide"
-    url: https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/
+  # 기본 가이드 메뉴 주석처리
+  # - title: "Quick-Start Guide"
+  #   url: https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/
   - title: "About"
     url: /about/
   - title: "Portfolio"
@@ -50,6 +51,6 @@ sidebar-category:
       - title: "소개 글"
         url: "/intro"
       - title: "카테고리B"
-        url: "/CategoryB"
+        url: "/CatigoryB"
       - title: "카테고리C"
         url: "/CategoryC"
