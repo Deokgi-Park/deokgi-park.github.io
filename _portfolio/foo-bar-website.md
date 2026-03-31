@@ -2,8 +2,8 @@
 title: "Foo Bar Identity"
 excerpt: "Foo Bar design system including logo mark, website design, and branding applications."
 header:
-  image: /assets/images/danggo.jpg
-  teaser: /assets/images/danggo.jpg
+  image: /assets/images/portfolio/danggo.jpg
+  teaser: /assets/images/portfolio/danggo.jpg
 sidebar:
   - title: "Role"
     image: http://placehold.it/350x250
@@ -12,14 +12,14 @@ sidebar:
   - title: "Responsibilities"
     text: "Reuters try PR stupid commenters should isn't a business model"
 gallery:
-  - url: /assets/images/danggo.jpg
-    image_path: assets/images/danggo.jpg
+  - url: /assets/images/portfolio/danggo.jpg
+    image_path: assets/images/portfolio/danggo.jpg
     alt: "placeholder image 1"
-  - url: /assets/images/danggo.jpg
-    image_path: assets/images/danggo.jpg
+  - url: /assets/images/portfolio/danggo.jpg
+    image_path: assets/images/portfolio/danggo.jpg
     alt: "placeholder image 2"
-  - url: /assets/images/danggo.jpg
-    image_path: assets/images/danggo.jpg
+  - url: /assets/images/portfolio/danggo.jpg
+    image_path: assets/images/portfolio/danggo.jpg
     alt: "placeholder image 3"
 ---
 

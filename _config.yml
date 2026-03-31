@@ -25,8 +25,8 @@ description: "웹 프로그래머의 정석"
 url: "https://deokgi-park.github.io"
 baseurl: # 사이트의 하위 경로, 예: "/blog"
 repository: "Deokgi-Park/deokgi-park.github.io"
-teaser: "/assets/images/loverDeok.jpg" # 기본 티저 이미지 경로, 예: "/assets/images/500x300.png"
-logo: "/assets/images/loverDeok.jpg" # 마스트헤드에 표시할 로고 이미지 경로, 예: "/assets/images/88x88.png"
+teaser: "/assets/images/profile/loverDeok.jpg" # 기본 티저 이미지 경로, 예: "/assets/images/500x300.png"
+logo: "/assets/images/profile/loverDeok.jpg" # 마스트헤드에 표시할 로고 이미지 경로, 예: "/assets/images/88x88.png"
 masthead_title: "고무오리 개발 블로그" # 마스트헤드에 표시되는 웹사이트 제목을 재정의합니다. 제목이 없으려면 " "를 사용하십시오.
 breadcrumbs: true # true, false (기본값)
 words_per_minute: 200
@@ -113,7 +113,7 @@ analytics:
 # 사이트 저자
 author:
   name: "러버덕"
-  avatar: "/assets/images/myAi.jpg" # 아바타 이미지 경로, 예: "/assets/images/bio-photo.jpg"
+  avatar: "/assets/images/profile/myAi.jpg" # 아바타 이미지 경로, 예: "/assets/images/bio-photo.jpg"
   bio: "듣고 말하고 디버깅하는 **러버덕**"
   location: "경기도 용인시 수지구"
   email:
@@ -325,6 +325,8 @@ defaults:
       comments: true
       share: true
       related: true
+      sidebar:
+        nav: "sidebar-category"
   # _portfolio
   - scope:
       path: ""
@@ -333,11 +335,3 @@ defaults:
       layout: single
       author_profile: false
       share: true
-  # _sample
-  - scope:
-      path: ""
-      type: sample
-    values:
-      layout: single
-      author_profile: false
-      share: false

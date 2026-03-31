@@ -3,23 +3,16 @@ main:
   # 기본 가이드 메뉴 주석처리
   # - title: "Quick-Start Guide"
   #   url: https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/
-  - title: "About"
-    url: /about/
-  - title: "Portfolio"
+  - title: "홈"
+    url: /
+  - title: "포트폴리오"
     url: /portfolio/
-  - title: "contact"
-    url: /contact/
-  - title: "categories"
+  - title: "카테고리"
     url: /categories/
-  - title: "tags"
+  - title: "태그"
     url: /tags/
-  - title: "Pages"
-    url: /page-archive/
-  - title: "Collections"
+  - title: "시리즈"
     url: /collection-archive/
-  - title: "External Link"
-    url: https://google.com
-    target: _blank
 
 docs:
   - title: "Quick-Start Guide"
@@ -46,11 +39,27 @@ docs:
 #   - title: "Responsibilities"
 #     text: "Reuters try PR stupid commenters should isn't a business model"
 sidebar-category:
-  - title: "카테고리"
+  - title: "소개"
     children:
       - title: "소개 글"
-        url: "/intro"
-      - title: "카테고리B"
-        url: "/CatigoryB"
-      - title: "카테고리C"
-        url: "/CategoryC"
+        url: "/about"
+      - title: "포트폴리오"
+        url: "/portfolio"
+  - title: "개발 이야기"
+    children:
+      - title: "프론트엔드"
+        url: "/frontend"
+      - title: "백엔드"
+        url: "/backend"
+      - title: "데브옵스"
+        url: "/devops"
+      - title: "기타"
+        url: "/etc"
+  - title: "노트"
+    children:
+      - title: "일상"
+        url: "/daily"
+      - title: "여행"
+        url: "/travel"
+      - title: "음식"
+        url: "/food"

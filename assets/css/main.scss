@@ -1,5 +1,5 @@
 ---
-# Only the main Sass file needs front matter (the dashes are enough)
+# 커스텀 스타일을 추가용도 파일, 해당 main.scss 파일에 front matter를 추가해야 Jekyll이 Sass로 컴파일할 수 있습니다.
 search: false
 ---
 
@@ -7,6 +7,32 @@ search: false
 
 @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
 @import "minimal-mistakes"; // main partials
+
+// 250212_PDG_TOC 사이드바 고정
+.toc {
+  @media screen and (min-width: 1025px) {
+    position: fixed;
+    top: 160px; // 260331_PDG_사이드바 위치 수정
+  }
+}
+
+// 260331_PDG_TOC 최대 높이 및 스크롤 추가
+.toc__menu {
+  max-height: 60vh;
+  overflow-y: auto;
+}
+
+// 260331_PDG_사이드바_스크롤_숨김
+.sidebar {
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+// 260331_PDG_메뉴_마우스_오버_스타일
+.nav__items ul li a:hover {
+  color: $primary-color;
+}
 
 @font-face {
   font-family: "MBC";
