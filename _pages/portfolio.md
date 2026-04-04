@@ -11,16 +11,15 @@ sidebar:
     image_alt: "박덕기"
     text: |
       <hr />
-      <p>이름 박덕기</p>
+      <p>이름 : 박덕기</p>
       <hr />
-      <p>프론트 및 풀스택 개발자</p>
+      <p>프론트/풀스택 개발자</p>
+      <hr />
+      <p>개발경력 : 3년</p>
       <hr />
       <ul class="author__urls social-icons" style="margin-top: 10px;">
-      <li itemprop="homeLocation" itemscope="" itemtype="https://schema.org/Place">
-      <i class="fas fa-fw fa-location-dot" aria-hidden="true"></i> <span itemprop="name" class="p-locality">경기도 용인시 수지구</span>
-      </li>
-      <li><a href="mailto:ejrrl6931@gmail.com" rel="nofollow noopener noreferrer me"><i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i><span class="label">Email</span></a></li>
-      <li><a href="https://github.com/Deokgi-Park" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fab fa-fw fa-github" aria-hidden="true"></i><span class="label">GitHub</span></a></li>
+      <li><a href="mailto:ejrrl6931@gmail.com" rel="nofollow noopener noreferrer me"><i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i><span class="label"> ejrrl6931@gmail.com</span></a></li>
+      <li><a href="https://github.com/Deokgi-Park" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fab fa-fw fa-github" aria-hidden="true"></i><span class="label"> github.com/Deokgi-Park</span></a></li>
       </ul>
 author_profile: false
 date: 2026-03-31
@@ -28,21 +27,53 @@ date: 2026-03-31
 
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap');
+.sidebar {
+  text-align: center;
+}
 
 .sidebar .author__avatar img,
 .sidebar img {
   display: block;
-  margin: 0 auto;
-  width : 80%;
+  margin: 0 auto 0.6em;
+  width: 75%;
+  border-radius: 50%;
 }
 
-// 260331_PDG_사이드바 작은 화면 스타일 수정
-.sidebar {
-  @media (max-width: #{$large}) {
-    text-align: center;
-    img {
-      width: 20%;
-    }
+/* 사이드바 섹션 타이틀 숨김 (개인 정보 텍스트) */
+.sidebar .sidebar__section-title {
+  display: none;
+}
+
+/* 사이드바 전체 간격 축소 */
+.sidebar .section__title {
+  font-size: 0.85em;
+  margin-bottom: 0.4em;
+}
+
+.sidebar p {
+  margin: 0 0 0.15em;
+  font-size: 0.85em;
+  line-height: 1.4;
+}
+
+.sidebar hr {
+  margin: 0.4em 0;
+  border: none;
+  border-top: 1px solid rgba(255,255,255,0.15);
+}
+
+.sidebar ul.author__urls {
+  margin-top: 0.5em !important;
+}
+
+.sidebar ul.author__urls li {
+  font-size: 0.82em;
+  padding: 0.15em 0;
+}
+
+@media (max-width: 1024px) {
+  .sidebar img {
+    width: 20% !important;
   }
 }
 
@@ -77,11 +108,18 @@ date: 2026-03-31
     border: 1px solid #ccc;
     padding: 4px 8px;
   }
-  div[style*="linear-gradient"],
-  .br-line,
   #print-btn {
     display: none !important;
   }
+  div[style*="linear-gradient"] {
+    background: #999 !important;
+    height: 1px !important;
+    margin: 2em 0 3em !important;
+    border-radius: 0 !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  
   #main {
     display: flex !important;
     align-items: flex-start;
@@ -98,6 +136,7 @@ date: 2026-03-31
   .sidebar img {
     display: block;
     margin: 0 auto;
+    width: 100% !important;
   }
   article.page {
     flex: 1 !important;
@@ -111,14 +150,123 @@ date: 2026-03-31
     outline : none;
     border : none;
   }
-  .br-line {
-    display: none !important;
-  }
+}
+
+/* 커스텀 커서 */
+body.portfolio-page {
+  cursor: none;
+}
+body.portfolio-page a,
+body.portfolio-page button {
+  cursor: none;
+}
+.sidebar *{
+  cursor: none;
+}
+#cursor-dot {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 8px;
+  height: 8px;
+  background: #00bfff;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 99999;
+  will-change: transform;
+  box-shadow: 0 0 8px #00bfff, 0 0 16px #00bfff;
+  transition: background 0.2s, box-shadow 0.2s;
+}
+#cursor-ring {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 36px;
+  height: 36px;
+  border: 2px solid rgba(123, 47, 255, 0.7);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 99998;
+  will-change: transform;
+  box-shadow: 0 0 10px rgba(123, 47, 255, 0.5), inset 0 0 10px rgba(123, 47, 255, 0.1);
+  transition: width 0.2s, height 0.2s, border-color 0.2s, box-shadow 0.2s;
+}
+body.portfolio-page a:hover ~ #cursor-dot,
+body.portfolio-page button:hover ~ #cursor-dot {
+  background: #7b2fff;
+  box-shadow: 0 0 12px #7b2fff, 0 0 24px #7b2fff;
+}
+@media print {
+  #cursor-dot, #cursor-ring { display: none !important; }
 }
 </style>
 
+<script>
+(function() {
+  document.body.classList.add('portfolio-page');
+
+  // cursor 요소를 body 최상위에 직접 추가
+  const dot = document.createElement('div');
+  dot.id = 'cursor-dot';
+  document.body.appendChild(dot);
+
+  const ring = document.createElement('div');
+  ring.id = 'cursor-ring';
+  document.body.appendChild(ring);
+  let mouseX = 0, mouseY = 0;
+  let ringX  = 0, ringY  = 0;
+
+  document.addEventListener('mousemove', function(e) {
+    mouseX = e.clientX;
+    mouseY = e.clientY;
+    dot.style.transform = 'translate(' + (mouseX - 4) + 'px, ' + (mouseY - 4) + 'px)';
+  });
+
+  // 링은 부드럽게 따라오게
+  function animateRing() {
+    ringX += (mouseX - ringX) * 0.12;
+    ringY += (mouseY - ringY) * 0.12;
+    ring.style.transform = 'translate(' + (ringX - 18) + 'px, ' + (ringY - 18) + 'px)';
+    requestAnimationFrame(animateRing);
+  }
+  animateRing();
+
+  // 클릭 시 링 확대 효과
+  document.addEventListener('mousedown', function() {
+    ring.style.width  = '50px';
+    ring.style.height = '50px';
+    ring.style.borderColor = 'rgba(0,191,255,0.9)';
+    ring.style.boxShadow = '0 0 20px rgba(0,191,255,0.7), inset 0 0 20px rgba(0,191,255,0.2)';
+  });
+  document.addEventListener('mouseup', function() {
+    ring.style.width  = '36px';
+    ring.style.height = '36px';
+    ring.style.borderColor = 'rgba(123,47,255,0.7)';
+    ring.style.boxShadow = '0 0 10px rgba(123,47,255,0.5), inset 0 0 10px rgba(123,47,255,0.1)';
+  });
+
+  // 링크/버튼 호버 시 링 색상 변경
+  document.querySelectorAll('a, button').forEach(function(el) {
+    el.addEventListener('mouseenter', function() {
+      dot.style.background  = '#7b2fff';
+      dot.style.boxShadow   = '0 0 12px #7b2fff, 0 0 24px #7b2fff';
+      ring.style.width      = '48px';
+      ring.style.height     = '48px';
+      ring.style.borderColor = 'rgba(0,191,255,0.9)';
+    });
+    el.addEventListener('mouseleave', function() {
+      dot.style.background  = '#00bfff';
+      dot.style.boxShadow   = '0 0 8px #00bfff, 0 0 16px #00bfff';
+      ring.style.width      = '36px';
+      ring.style.height     = '36px';
+      ring.style.borderColor = 'rgba(123,47,255,0.7)';
+    });
+  });
+})();
+</script>
+
 <div  class='br-line' id="print-btn" style="float: right;">
-  <button onclick="window.print()" style="padding:0.5em 1.4em; background:linear-gradient(135deg,#7b2fff,#00bfff); color:#fff; border:none; border-radius:6px; cursor:pointer; font-size:0.95em; font-weight:bold; letter-spacing:0.03em; position: relative; top: -70px;">
+  <button onclick="window.print()" style="padding:0.5em 1.4em; background:linear-gradient(135deg,#7b2fff,#00bfff); color:#fff; border:none; border-radius:6px; cursor:pointer; font-size:0.95em; font-weight:bold; letter-spacing:0.03em; position: relative; top: -70px; cursor: none;">
     📄 PDF로 저장
   </button>
 </div>
@@ -156,9 +304,9 @@ date: 2026-03-31
 
 | 기술                          | 설명                                                                   |
 | ----------------------------- | ---------------------------------------------------------------------- |
-| `Kubernetes` / `Docker`       | MSA 배포 경험, 컨테이너 기술 학습                                      |
+| `Kubernetes` / `Docker`       | 개인적인 쿠버네티스 구축 경험, 컨테이너 기술 학습                      |
 | `Apache` / `Tomcat` / `Linux` | 리눅스 기반 서버에 WEB/WAS 구성, 서버 유지보수                         |
-| `C 언어`                      | 자료구조·알고리즘 학습, 웹 서버 구현, 스레드·프로세스·OS 스케줄링 학습 |
+| `C`                           | 자료구조·알고리즘 학습, 웹 서버 구현, 스레드·프로세스·OS 스케줄링 학습 |
 
 <div  class='br-line' style="height:3px;background:linear-gradient(to right,transparent,#7b2fff,#00bfff,transparent);margin:2em 0;border-radius:2px;"></div>
 
@@ -177,9 +325,10 @@ date: 2026-03-31
 
 | 프로젝트              | 기간              | 기술 스택                                     |
 | --------------------- | ----------------- | --------------------------------------------- |
-| 포켓몬 게시판(리뉴얼) | 2026.03           | Next.js, React, Firebase                      |
+| 포켓몬 게시판(리뉴얼) | 2026.03           | Next.js, Firebase                             |
+| 일일 미로 게임        | 2025.09           | Next.js, cloud flare d1                       |
 | POKE-CODE             | 2024.06 ~ 2024.07 | React, Redux, TypeScript, Node.js, MySQL      |
-| 포켓몬 게시판         | 2024.06           | Next.js, React, Firebase                      |
+| 포켓몬 게시판         | 2024.06           | Next.js, Firebase                             |
 | Tarzan                | 2024.03           | Python, Flask, Jinja, JWT, BeautifulSoup, SSR |
 | 하베스토리            | 2021.03 ~ 2021.10 | Spring Framework, JSP, JSTL, MySQL, jQuery    |
 | 게임예약사이트        | 2020.10 ~ 2020.12 | Spring Framework, JSP, JSTL, MySQL, jQuery    |
@@ -197,4 +346,6 @@ date: 2026-03-31
 | 사무자동화산업기사   | 국가기술자격증 |
 | GTQ 1급              | 국가기술자격증 |
 
-## 프로젝트 링크
+<div  class='br-line' style="height:3px;background:linear-gradient(to right,transparent,#7b2fff,#00bfff,transparent);margin:2em 0;border-radius:2px;"></div>
+
+## 프로젝트 종류(링크)
