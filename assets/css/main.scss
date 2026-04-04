@@ -34,6 +34,64 @@ search: false
   color: $primary-color;
 }
 
+// 260331_PDG_인용문 폰트 크기 조정
+blockquote {
+  font-size: 1em;
+}
+
+// 260331_PDG_포스트 본문 폰트 크기 조정
+.page__content p {
+  font-size: 0.75em;
+}
+
+// 260331_PDG_코드 폰트 수정
+code {
+  font-family: "Galmuri14", Consolas, "Courier New", monospace;
+  font-size: 0.8em;
+}
+// 260331_PDG_사이드바 코드 스타일 수정
+.sidebar code {
+  padding-top: 0.1rem;
+  padding-bottom: 0.1rem;
+  font-size: 0.8em;
+  background: $code-background-color;
+  border-radius: $border-radius;
+
+  &::before,
+  &::after {
+    letter-spacing: -0.2em;
+    content: "\00a0"; /* non-breaking space*/
+  }
+}
+.archive :not(pre) > code {
+  padding-top: 0.1rem;
+  padding-bottom: 0.1rem;
+  font-size: 0.8em;
+  background: $code-background-color;
+  border-radius: $border-radius;
+
+  &::before,
+  &::after {
+    letter-spacing: -0.2em;
+    content: "\00a0"; /* non-breaking space*/
+  }
+}
+
+/** 260331_toc__menu_호버_스타일 */
+.toc__menu li ul > li a {
+  font-weight: bold;
+}
+
+// 260331_PDG_사이드바 작은 화면 스타일 수정
+.sidebar {
+  @media (max-width: #{$large}) {
+    text-align: center;
+    img {
+      width: 40%;
+    }
+  }
+}
+
 @font-face {
   font-family: "MBC";
   src: url("/assets/fonts/MBC_1961_M.ttf") format("truetype");

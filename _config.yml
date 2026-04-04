@@ -308,9 +308,6 @@ collections:
   portfolio:
     output: true
     permalink: /:collection/:path/
-  sample:
-    output: true
-    permalink: /:collection/:path/
 
 # 기본값
 defaults:
@@ -321,7 +318,8 @@ defaults:
     values:
       layout: single
       author_profile: true
-      read_time: true
+      # read_time: true
+      show_date: true
       comments: true
       share: true
       related: true

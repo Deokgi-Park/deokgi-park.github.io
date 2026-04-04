@@ -53,8 +53,10 @@ sidebar-category:
         url: "/backend"
       - title: "데브옵스"
         url: "/devops"
-      - title: "기타"
-        url: "/etc"
+      - title: "AI 및 기타"
+        url: "/ai-and-others"
+      - title: "회고"
+        url: "/retrospective"
   - title: "노트"
     children:
       - title: "일상"

@@ -16,13 +16,15 @@ html {
   border-radius: 8px;
   background: -webkit-linear-gradient(
     75deg,
-    #afffe4,
-    #b7e396,
-    #ffeea9,
-    #ffc19c,
+    #d300a9,
+    // #b7e396,
+    // #ffeea9,
+    // #ffc19c,
     #ff9bcd
   );
-  transition: colorChange 0.5s ease, transform 0.3s ease;
+  transition:
+    colorChange 0.5s ease,
+    transform 0.3s ease;
 }
 
 ::-webkit-scrollbar-track {
@@ -205,7 +207,7 @@ body {
   }
 
   /* vertical alignment for first content */
-  :first-child, 
+  :first-child,
   aside + :nth-child(2) {
     margin-top: 0em;
   }

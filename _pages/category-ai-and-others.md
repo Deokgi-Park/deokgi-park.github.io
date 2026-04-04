@@ -1,8 +1,8 @@
 ---
-title: "기타"
+title: "AI 및 기타"
 layout: category
-permalink: /etc/
-taxonomy: etc
+permalink: /ai-and-others/
+taxonomy: ai-and-others
 author_profile: true
 sidebar:
   nav: "sidebar-category"
