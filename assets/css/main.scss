@@ -82,16 +82,6 @@ code {
   font-weight: bold;
 }
 
-// 260331_PDG_사이드바 작은 화면 스타일 수정
-.sidebar {
-  @media (max-width: #{$large}) {
-    text-align: center;
-    img {
-      width: 40%;
-    }
-  }
-}
-
 @font-face {
   font-family: "MBC";
   src: url("/assets/fonts/MBC_1961_M.ttf") format("truetype");

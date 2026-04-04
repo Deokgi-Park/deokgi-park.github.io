@@ -2,7 +2,7 @@
 title: "collection템플릿"
 excerpt: "Foo Bar design system including logo mark, website design, and branding applications."
 classes: wide
-published: false
+# published: false
 header:
   image: /assets/images/portfolio/danggo.jpg
   teaser: /assets/images/portfolio/danggo.jpg
