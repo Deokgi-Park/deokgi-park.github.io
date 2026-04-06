@@ -17,12 +17,36 @@ sidebar:
       <hr />
       <p>개발경력 : 3년</p>
       <hr />
-      <ul class="author__urls social-icons" style="margin-top: 10px;">
+      <ul class="author__urls social-icons" style="margin-top: 10px; text-align:left;">
       <li><a href="mailto:ejrrl6931@gmail.com" rel="nofollow noopener noreferrer me"><i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i><span class="label"> ejrrl6931@gmail.com</span></a></li>
       <li><a href="https://github.com/Deokgi-Park" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fab fa-fw fa-github" aria-hidden="true"></i><span class="label"> github.com/Deokgi-Park</span></a></li>
       </ul>
 author_profile: false
 date: 2026-03-31
+feature_row1:
+  - image_path: /assets/images/stack1.png
+    alt: "placeholder image 2"
+    title: "Placeholder Image Left Aligned"
+    excerpt: 'This is some sample content that goes here with **Markdown** formatting. Left aligned with `type="left"`'
+    url: "#test-link"
+    btn_label: "Read More"
+    btn_class: "btn--primary"
+feature_row2:
+  - image_path: /assets/images/image_duck.png
+    alt: "placeholder image 2"
+    title: "Placeholder Image Left Aligned"
+    excerpt: 'This is some sample content that goes here with **Markdown** formatting. Left aligned with `type="left"`'
+    url: "#test-link"
+    btn_label: "Read More"
+    btn_class: "btn--primary"
+feature_row3:
+  - image_path: /assets/images/image_duck.png
+    alt: "placeholder image 2"
+    title: "Placeholder Image Left Aligned"
+    excerpt: 'This is some sample content that goes here with **Markdown** formatting. Left aligned with `type="left"`'
+    url: "#test-link"
+    btn_label: "Read More"
+    btn_class: "btn--primary"
 ---
 
 <style>
@@ -71,7 +95,7 @@ date: 2026-03-31
   padding: 0.15em 0;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1023px) {
   .sidebar img {
     width: 20% !important;
   }
@@ -277,13 +301,14 @@ body.portfolio-page button:hover ~ #cursor-dot {
 
 - 재미있는 애니메이션이나 효과를 만들고 이를 통해 사용자들의 사이트 이용 경험에 좋은 영향을 주는 것을 목표로 하고 이를 즐기는 개발자입니다.
 - 문제 상황에 알맞은 대처에 대해 생각하고 주변과 소통하여 최적의 해결안을 찾으려 노력합니다.
-- 맡은 일의 해결을 위해 집중하고 이를 해결하기까지 책임감을 갖고 업무를 수행합니다.
+- 맡은 일의 해결을 위해 여러 방법으로 접근하며 이를 해결하기까지 책임감을 갖고 업무를 수행합니다.
+- AI를 통한 빠른 개발을 학습하고 있습니다.
 
 <div  class='br-line' style="height:3px;background:linear-gradient(to right,transparent,#7b2fff,#00bfff,transparent);margin:2em 0;border-radius:2px;"></div>
 
 ## 기술
 
-### Front End
+### 프론트엔드
 
 | 기술                          | 설명                                                                             |
 | ----------------------------- | -------------------------------------------------------------------------------- |
@@ -292,7 +317,7 @@ body.portfolio-page button:hover ~ #cursor-dot {
 | `TypeScript`                  | 타입 기반 개발 경험, 변수 타입 지정의 필요성 이해                                |
 | `TailwindCSS`                 | 유틸리티 기반의 효율적인 스타일링                                                |
 
-### Back End
+### 백엔드
 
 | 기술                           | 설명                                                            |
 | ------------------------------ | --------------------------------------------------------------- |
@@ -300,7 +325,7 @@ body.portfolio-page button:hover ~ #cursor-dot {
 | `Oracle` / `MySQL` / `MongoDB` | DDL·DML을 활용한 관계형 DB 관리, NoSQL 사용 경험                |
 | `Python` / `Flask` / `Jinja`   | Flask 웹 서버 구축, BeautifulSoup 크롤링, Jinja SSR 페이지 제작 |
 
-### ETC
+### 기타
 
 | 기술                          | 설명                                                                   |
 | ----------------------------- | ---------------------------------------------------------------------- |
@@ -321,6 +346,26 @@ body.portfolio-page button:hover ~ #cursor-dot {
 
 <div  class='br-line' style="height:3px;background:linear-gradient(to right,transparent,#7b2fff,#00bfff,transparent);margin:2em 0;border-radius:2px;"></div>
 
+## 자격증
+
+| 자격증 / 수료증      | 구분           |
+| -------------------- | -------------- |
+| 정보처리기사         | 국가기술자격증 |
+| SQLD                 | 공인자격증     |
+| 크래프톤 정글 수료증 | 수료증         |
+| K-PAAS 수료증        | 수료증         |
+| 사무자동화산업기사   | 국가기술자격증 |
+| GTQ 1급              | 국가기술자격증 |
+
+<div  class='br-line' style="height:3px;background:linear-gradient(to right,transparent,#7b2fff,#00bfff,transparent);margin:2em 0;border-radius:2px;"></div>
+
+{% include feature_row id="feature_row1" type="left" %}
+
+<!-- {% include feature_row id="feature_row2" type="left" %} -->
+<!-- {% include feature_row id="feature_row3" type="left" %} -->
+
+<div  class='br-line' style="height:3px;background:linear-gradient(to right,transparent,#7b2fff,#00bfff,transparent);margin:2em 0;border-radius:2px;"></div>
+
 ## 프로젝트
 
 | 프로젝트              | 기간              | 기술 스택                                     |
@@ -332,19 +377,6 @@ body.portfolio-page button:hover ~ #cursor-dot {
 | Tarzan                | 2024.03           | Python, Flask, Jinja, JWT, BeautifulSoup, SSR |
 | 하베스토리            | 2021.03 ~ 2021.10 | Spring Framework, JSP, JSTL, MySQL, jQuery    |
 | 게임예약사이트        | 2020.10 ~ 2020.12 | Spring Framework, JSP, JSTL, MySQL, jQuery    |
-
-<div  class='br-line' style="height:3px;background:linear-gradient(to right,transparent,#7b2fff,#00bfff,transparent);margin:2em 0;border-radius:2px;"></div>
-
-## 자격증
-
-| 자격증 / 수료증      | 구분           |
-| -------------------- | -------------- |
-| 정보처리기사         | 국가기술자격증 |
-| SQLD                 | 공인자격증     |
-| 크래프톤 정글 수료증 | 수료증         |
-| K-PAAS 수료증        | 수료증         |
-| 사무자동화산업기사   | 국가기술자격증 |
-| GTQ 1급              | 국가기술자격증 |
 
 <div  class='br-line' style="height:3px;background:linear-gradient(to right,transparent,#7b2fff,#00bfff,transparent);margin:2em 0;border-radius:2px;"></div>
 
