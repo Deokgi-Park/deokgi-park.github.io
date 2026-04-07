@@ -37,6 +37,7 @@ search: false
 // 260331_PDG_인용문 폰트 크기 조정
 blockquote {
   font-size: 1em;
+  margin-block: 1.5em;
 }
 
 // 260331_PDG_포스트 본문 폰트 크기 조정
@@ -80,6 +81,11 @@ code {
 /** 260331_toc__menu_호버_스타일 */
 .toc__menu li ul > li a {
   font-weight: bold;
+}
+
+/** 260407_줄바꿈용 수평선 마진 변경 */
+hr {
+  margin: 1em 0 3em;
 }
 
 @font-face {

@@ -95,7 +95,25 @@ feature_row3:
   padding: 0.15em 0;
 }
 
-@media (max-width: 1023px) {
+img{
+  transition: none;
+}
+
+hr:before {
+    content: '';
+    background-image: url(/assets/Scissor.svg);
+    background-position: 8px -5px;
+    background-repeat: no-repeat;
+    background-size: 35px 35px;
+    display: block;
+    width: 50px;
+    height: 24px;
+    position: absolute;
+    left: 8px;
+    margin-top: -10px;
+}
+
+@media (max-width: 1024px) {
   .sidebar img {
     width: 20% !important;
   }
