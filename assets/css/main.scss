@@ -50,8 +50,12 @@ code {
   font-family: "Galmuri14", Consolas, "Courier New", monospace;
   font-size: 0.8em;
 }
+
+// #main > div.page__related > div > div:nth-child(2) > article > p:nth-child(3) > code:nth-child(1)
+
 // 260331_PDG_사이드바 코드 스타일 수정
-.sidebar code {
+.sidebar code,
+.archive__item code {
   padding-top: 0.1rem;
   padding-bottom: 0.1rem;
   font-size: 0.8em;

@@ -25,28 +25,76 @@ author_profile: false
 date: 2026-03-31
 feature_row1:
   - image_path: /assets/images/stack1.png
-    alt: "placeholder image 2"
-    title: "Placeholder Image Left Aligned"
-    excerpt: 'This is some sample content that goes here with **Markdown** formatting. Left aligned with `type="left"`'
-    url: "#test-link"
-    btn_label: "Read More"
-    btn_class: "btn--primary"
+    alt: "stack1"
+    title: "기본적인 웹페이지 작성 기술"
+    excerpt: '웹 퍼블리싱, 미디어 쿼리를 활용한 반응형 웹 디자인 및<br/> jQuery를 활용한 DOM 조작 및 이벤트 핸들링 가능'
+    # url: "#test-link"
+    # btn_label: "Read More"
+    # btn_class: "btn--primary"
 feature_row2:
-  - image_path: /assets/images/image_duck.png
-    alt: "placeholder image 2"
-    title: "Placeholder Image Left Aligned"
-    excerpt: 'This is some sample content that goes here with **Markdown** formatting. Left aligned with `type="left"`'
-    url: "#test-link"
-    btn_label: "Read More"
-    btn_class: "btn--primary"
+  - image_path: /assets/images/stack2.png
+    alt: "stack2"
+    title: "프론트엔드 라이브러리/프레임워크 기술"
+    excerpt: 'React 기반 프론트엔드 개발, Next.js SSR 경험, 상태관리 라이브러리 경험'
+    # url: "#test-link"
+    # btn_label: "Read More"
+    # btn_class: "btn--primary"
 feature_row3:
-  - image_path: /assets/images/image_duck.png
-    alt: "placeholder image 2"
-    title: "Placeholder Image Left Aligned"
-    excerpt: 'This is some sample content that goes here with **Markdown** formatting. Left aligned with `type="left"`'
-    url: "#test-link"
-    btn_label: "Read More"
-    btn_class: "btn--primary"
+  - image_path: /assets/images/stack3.png
+    alt: "stack3"
+    title: "생산성 & 품질을 위한 기술"
+    excerpt: '빠른 UI 개발과 안정적인 코드 작성을 위한 도구 경험'
+    # url: "#test-link"
+    # btn_label: "Read More"
+    # btn_class: "btn--primary"
+feature_row4:
+  - image_path: /assets/images/stack4.png
+    alt: "stack4"
+    title: "JAVA 프레임워크를 통한 백엔드 개발 기술"
+    excerpt: 'Spring Framework를 사용한 MVC 패턴 기반 백엔드 개발'
+    # url: "#test-link"
+    # btn_label: "Read More"
+    # btn_class: "btn--primary"
+feature_row5:
+  - image_path: /assets/images/stack5.png
+    alt: "stack5"
+    title: "다양한 형태의 DBMS 기술"
+    excerpt: 'DDL·DML을 활용한 관계형 DB 관리, NoSQL 사용 경험'
+    # url: "#test-link"
+    # btn_label: "Read More"
+    # btn_class: "btn--primary"
+feature_row6:
+  - image_path: /assets/images/stack6.png
+    alt: "stack6"
+    title: "Python 라이브러리를 통한 API 서버 생성"
+    excerpt: 'Flask 웹 서버 구축, BeautifulSoup 크롤링, selenium을 통한 원격 조작 등 파이썬 라이브러리를 통해 자동화 툴이나 특수한 서버 개발 가능'
+    # url: "#test-link"
+    # btn_label: "Read More"
+    # btn_class: "btn--primary"
+feature_row7:
+  - image_path: /assets/images/stack7.png
+    alt: "stack7"
+    title: "컨테이너 및 오케스트레이션 기능 경험"
+    excerpt: 'K-PAAS 교육 수료 및 미니쿠버네티스 구축 경험, 컨테이너 기술 학습'
+    # url: "#test-link"
+    # btn_label: "Read More"
+    # btn_class: "btn--primary"
+feature_row8:
+  - image_path: /assets/images/stack8.png
+    alt: "stack8"
+    title: "리눅스 및 웹 서버 관련 기술"
+    excerpt: '리눅스 서버 내 Apache 기반 WEB/WAS 설치 및 유지보수 경험'
+    # url: "#test-link"
+    # btn_label: "Read More"
+    # btn_class: "btn--primary"
+feature_row9:
+  - image_path: /assets/images/stack9.png
+    alt: "stack9"
+    title: "C언어를 통한 CS 지식 경험"
+    excerpt: '메모리 할당, 웹 서버 개선, OS에서 스레드/프로세스 스케줄링 학습'
+    # url: "#test-link"
+    # btn_label: "Read More"
+    # btn_class: "btn--primary"
 ---
 
 <style>
@@ -127,6 +175,18 @@ img{
   a {
     color: #000 !important;
     text-decoration: none;
+  }
+  .archive__item-teaser,
+  .feature__wrapper .archive__item-teaser {
+    background: #000 !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  .archive__item-teaser img,
+  .feature__wrapper .archive__item-teaser img {
+    background: #000 !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
   }
   table {
     border-collapse: collapse;
@@ -313,29 +373,27 @@ body.portfolio-page button:hover ~ #cursor-dot {
 ## 기술
 
 ### 프론트엔드
+{% include feature_row id="feature_row1" type="left" %}
 
-| 기술                          | 설명                                                                             |
-| ----------------------------- | -------------------------------------------------------------------------------- |
-| `HTML` / `CSS` / `JS`         | 미디어 쿼리를 활용한 반응형 웹 디자인, jQuery를 활용한 DOM 조작 및 이벤트 핸들링 |
-| `React` / `Next.js` / `Redux` | React 기반 프론트엔드 개발, Next.js SSR 경험, Redux를 통한 상태 관리             |
-| `TypeScript`                  | 타입 기반 개발 경험, 변수 타입 지정의 필요성 이해                                |
-| `TailwindCSS`                 | 유틸리티 기반의 효율적인 스타일링                                                |
+{% include feature_row id="feature_row2" type="left" %}
+
+{% include feature_row id="feature_row3" type="left" %}
+
 
 ### 백엔드
+{% include feature_row id="feature_row4" type="left" %}
 
-| 기술                           | 설명                                                            |
-| ------------------------------ | --------------------------------------------------------------- |
-| `Spring Framework`             | MVC 패턴 기반 웹 개발, JSP / JSTL을 활용한 동적 페이지 작성     |
-| `Oracle` / `MySQL` / `MongoDB` | DDL·DML을 활용한 관계형 DB 관리, NoSQL 사용 경험                |
-| `Python` / `Flask` / `Jinja`   | Flask 웹 서버 구축, BeautifulSoup 크롤링, Jinja SSR 페이지 제작 |
+{% include feature_row id="feature_row5" type="left" %}
+
+{% include feature_row id="feature_row6" type="left" %}
+
 
 ### 기타
+{% include feature_row id="feature_row7" type="left" %}
 
-| 기술                          | 설명                                                                   |
-| ----------------------------- | ---------------------------------------------------------------------- |
-| `Kubernetes` / `Docker`       | 개인적인 쿠버네티스 구축 경험, 컨테이너 기술 학습                      |
-| `Apache` / `Tomcat` / `Linux` | 리눅스 기반 서버에 WEB/WAS 구성, 서버 유지보수                         |
-| `C`                           | 자료구조·알고리즘 학습, 웹 서버 구현, 스레드·프로세스·OS 스케줄링 학습 |
+{% include feature_row id="feature_row8" type="left" %}
+
+{% include feature_row id="feature_row9" type="left" %}
 
 <div  class='br-line' style="height:3px;background:linear-gradient(to right,transparent,#7b2fff,#00bfff,transparent);margin:2em 0;border-radius:2px;"></div>
 
@@ -360,13 +418,6 @@ body.portfolio-page button:hover ~ #cursor-dot {
 | K-PAAS 수료증        | 수료증         |
 | 사무자동화산업기사   | 국가기술자격증 |
 | GTQ 1급              | 국가기술자격증 |
-
-<div  class='br-line' style="height:3px;background:linear-gradient(to right,transparent,#7b2fff,#00bfff,transparent);margin:2em 0;border-radius:2px;"></div>
-
-{% include feature_row id="feature_row1" type="left" %}
-
-<!-- {% include feature_row id="feature_row2" type="left" %} -->
-<!-- {% include feature_row id="feature_row3" type="left" %} -->
 
 <div  class='br-line' style="height:3px;background:linear-gradient(to right,transparent,#7b2fff,#00bfff,transparent);margin:2em 0;border-radius:2px;"></div>
 

@@ -221,12 +221,18 @@
 
   .archive__item-teaser {
     @include breakpoint($small) {
-      max-height: 200px;
+      // 260412_하단 썸네일 크기 조정
+      height: 200px;
+      line-height: 200px;
+      // max-height: 200px;
     }
 
-    @include breakpoint($medium) {
-      max-height: 120px;
-    }
+    // @include breakpoint($medium) {
+    //   // 260412_하단 썸네일 크기 조정
+    //   height: 300px;
+    //   line-height: 300px;
+    //   // max-height: 120px;
+    // }
   }
 }
 

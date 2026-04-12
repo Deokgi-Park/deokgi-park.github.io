@@ -25,6 +25,17 @@
         <a class="u-url" href="{{ post.url | relative_url }}" rel="permalink">{{ title }}</a>
       {% endif %}
     </h2>
+    <!-- 260412_태그표시 start-->
+    {% if post.tags.size > 0 %}
+    <p style="margin: 0.5em auto;">
+      {% for tag in post.tags %}
+        <code>
+          {{ tag }}
+        </code>
+        {% endfor %}
+    </p>
+    {% endif %}
+    <!-- 260412_태그표시 end-->
     {% include page__meta.html locale=locale type=include.type %}
     {% if post.excerpt %}<p class="archive__item-excerpt p-summary" itemprop="description">{{ post.excerpt | markdownify | strip_html | truncate: 160 }}</p>{% endif %}
   </article>
