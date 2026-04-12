@@ -87,6 +87,20 @@ code {
 hr {
   margin: 1em 0 3em;
 }
+// 가위 모양 아이콘 제거, 필요 시 아래 코드 수정
+// hr:before {
+//   content: "";
+//   background-image: url(/assets/Scissor.svg);
+//   background-position: 8px -5px;
+//   background-repeat: no-repeat;
+//   background-size: 35px 35px;
+//   display: block;
+//   width: 50px;
+//   height: 24px;
+//   position: absolute;
+//   left: 8px;
+//   margin-top: -10px;
+// }
 
 @font-face {
   font-family: "MBC";
