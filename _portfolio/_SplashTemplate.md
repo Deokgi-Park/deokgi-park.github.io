@@ -1,7 +1,7 @@
 ---
 title: "splash템플릿"
 layout: splash
-# published: false
+published: false
 header:
   overlay_color: "#000"
   overlay_filter: "0.5"
@@ -56,6 +56,7 @@ feature_row4:
     btn_label: "Read More"
     btn_class: "btn--primary"
 search: false
+
 ---
 
 {% include feature_row id="intro" type="center" %}
