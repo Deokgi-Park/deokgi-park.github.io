@@ -374,7 +374,7 @@ body.portfolio-page button:hover ~ #cursor-dot {
 
 ## 소개
 
->_"**최대 수만 유저까지 사용하는 솔루션 유지보수 경험을 바탕으로 여러 환경에서도 개발 가능한 현장 맞춤형 개발자 '박덕기'** 입니다."_{: style="word-break: auto-phrase;"}
+>_"**최대 수만 유저까지 사용하는 솔루션 유지보수 경험을 바탕으로 여러 환경에서도 개발 가능한 현장 맞춤형 개발자입니다.**"_{: style="word-break: auto-phrase;"}
 <div style="word-break: auto-phrase; text-indent: -1.6em; padding-left: 1.6em;">
 <p style="margin-bottom: 3px;">▶️ <code>NEXT.JS</code> 등과 같은 <code>React 기반 라이브러리</code>로 개발하는데 관심이 많고 빠른 개발 동향에 맞춰 발전해나가는 개발자를 목표로 하고 있습니다.</p>
 <p style="margin-bottom: 3px;">▶️ 2년간의 여러 환경에서 유지보수하는 경험으로 <code>서버 환경과 오류 상황에 맞게 대처하는 능력</code>을 길렀습니다.</p>
