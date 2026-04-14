@@ -147,6 +147,7 @@ img{
   transition: none;
 }
 
+
 @media (max-width: 1024px) {
   .sidebar img {
     width: 20% !important;
@@ -240,6 +241,15 @@ img{
     word-break: break-all;
     outline : none;
     border : none;
+  }  
+  blockquote {
+    padding-top: 0em;
+    
+    p{
+      margin:0; 
+      padding-bottom: 0 !important; 
+      font-weight:bold;
+    }
   }
 }
 
@@ -364,17 +374,18 @@ body.portfolio-page button:hover ~ #cursor-dot {
 
 ## 소개
 
->_안녕하세요, **현장 맞춤형으로 여러 환경에서도 개발 가능한 개발자 '박덕기'** 입니다._
-
-▶️ 프론트엔드에 관심이 많고 빠른 개발 동향에 맞춰 발전해나가는 개발자를 목표로 하고 있습니다.<br>
-▶️ 2년간의 여러 환경에서 유지보수하는 경험으로 여러 환경과 상황에 대처하는 능력을 길렀습니다.<br>
-▶️ 최근 AI로 개발하는 것에 관심이 많고 빠르고 다재다능한 개발을 목표로 학습하였습니다.<br>
-
+>_"**최대 수만 유저까지 사용하는 솔루션 유지보수 경험을 바탕으로 여러 환경에서도 개발 가능한 현장 맞춤형 개발자 '박덕기'** 입니다."_{: style="word-break: auto-phrase;"}
+<div style="word-break: auto-phrase; text-indent: -1.6em; padding-left: 1.6em;">
+<p style="margin-bottom: 3px;">▶️ <code>NEXT.JS</code> 등과 같은 <code>React 기반 라이브러리</code>로 개발하는데 관심이 많고 빠른 개발 동향에 맞춰 발전해나가는 개발자를 목표로 하고 있습니다.</p>
+<p style="margin-bottom: 3px;">▶️ 2년간의 여러 환경에서 유지보수하는 경험으로 <code>서버 환경과 오류 상황에 맞게 대처하는 능력</code>을 길렀습니다.</p>
+<p>▶️ 최근 <code>Claude code</code> 와 같이 AI 모델을 통한 개발에 관심이 많고 빠른 개발을 목표로 학습하였습니다.
+</p>
+</div>
 <div  class='br-line' style="height:3px;background:linear-gradient(to right,transparent,#7b2fff,#00bfff,transparent);margin:2em 0;border-radius:2px;"></div>
 
 ## 기술
 
-### 프론트엔드
+> <p style="margin:0; padding-bottom: 1em; font-weight:bold;">프론트엔드</p>
 {% include feature_row id="feature_row1" type="left" %}
 
 {% include feature_row id="feature_row2" type="left" %}
@@ -382,7 +393,7 @@ body.portfolio-page button:hover ~ #cursor-dot {
 {% include feature_row id="feature_row3" type="left" %}
 
 
-### 백엔드
+> <p style="margin:0; padding-bottom: 1em; font-weight:bold;">백엔드</p>
 {% include feature_row id="feature_row4" type="left" %}
 
 {% include feature_row id="feature_row5" type="left" %}
@@ -390,7 +401,7 @@ body.portfolio-page button:hover ~ #cursor-dot {
 {% include feature_row id="feature_row6" type="left" %}
 
 
-### 기타
+> <p style="margin:0; padding-bottom: 1em; font-weight:bold;">기타</p>
 {% include feature_row id="feature_row7" type="left" %}
 
 {% include feature_row id="feature_row8" type="left" %}
@@ -403,7 +414,7 @@ body.portfolio-page button:hover ~ #cursor-dot {
 
 | 기간              | 회사/교육                    | 역할                                                           |
 | ----------------- | ---------------------------- | -------------------------------------------------------------- |
-| 2024.11 ~ 2025.12 | 핸디코어<br>(12개월) | **[그룹웨어 솔루션 업체] PS팀 프로젝트**<br> **1️⃣ 제주 관공서 6개 기관 그룹웨어 차세대 구축 프로젝트** <br>💠 클라우드 환경에서 그룹웨어 구축<br>💠 DB 커넥션 연결 장애 발생 원인 분석 <br> 💠 ERP 시스템과 문서 결재 연동 설계 <br><br> **2️⃣ 부산 공사 프로젝트**<br>💠 단위 및 통합테스트 지원<br>💠 프로젝트 중 지속적인 패치 및 배포 진행<br>💠 타 시스템과 그룹웨어간 연동 프로세스 협의 및 지원<br>💠 WEB/WAS 설정 및 재기동 관리                         |
+| 2024.11 ~ 2025.12 | 핸디코어<br>(12개월) | **[그룹웨어 솔루션 업체] PS팀 프로젝트**<br> **1️⃣ 제주 관공서 6개 기관 그룹웨어 차세대 구축 프로젝트** <br>💠 클라우드 환경에서 그룹웨어 구축<br>💠 DB 커넥션 연결 장애 발생 원인 분석 <br> 💠 ERP 시스템과 문서 결재 연동 설계 <br><br> **2️⃣ 부산 공사 프로젝트**<br>💠 단위 및 통합테스트 지원<br>💠 프로젝트 중 지속적인 패치 및 배포 진행<br>💠 타 시스템과 그룹웨어간 연동 프로세스 협의 및 지원<br>💠 WEB/WAS 설정 및 재기동 관리<br><br> **3️⃣ 커스텀 게시판 솔루션 관리**<br>💠 사용 목적에 맞는 게시판으로 커스텀할 수 있는 웹 애플리케이션 관리                        |
 | 2024.03 ~ 2024.08 | 크래프톤 정글<br>(5개월)     | **[교육과정] CS 지식 관련 부트캠프**<br>**1️⃣ 3박 4일 미니 프로젝트**<br>💠 기숙사 민원 관리 시스템 'Tarzan' 개발<br>💠 Python의 Flask 웹서버 사용<br>💠 JWT 토큰을 통한 로그인 구현<br>💠 SPA와 SSR의 장단점 이해 <br>💠 Jinja2 템플릿 엔진을 사용한 SSR 구현<br><br>2️⃣ **알고리즘 및 자료구조**<br>💠 재귀 함수, 정렬, 완전탐색 <br>💠 이분탐색, 분할정복, 스택, 큐, 우선순위 큐<br>💠 그래프(vertex, edge, node, arc), BFS, DFS, 위상정렬<br>💠 동적 프로그래밍, 그리디 알고리즘<br><br>3️⃣ **C언어 프로젝트**<br>💠 Linked List 와 같은 자료구조 구현<br>💠 R-B트리 구현<br>💠 Malloc 을 통한 메모리 할당 및 개선<br>💠 웹서버를 분석 및 개선하여 서버 기술 터득 <br><br>4️⃣ **운영체제 프로젝트**<br>💠 KAIST 교육과정인 PintOS 분석 및 개선 프로젝트<br>💠 Threads 에 대한 이해 및 개선<br>💠 OS 커널과 User Program에 대한 이해<br>💠 가상메모리에 대한 이해 및 동작 구현|
 | 2022.03 ~ 2024.03 | 핸디코어<br>(24개월)         | **[그룹웨어 솔루션 업체] CS팀 유지보수 및 사이드 프로젝트**<br>1️⃣ **대형 의료원 유지보수**<br>💠 모바일 SLO API 구현<br>💠 생체인증 로그인 화면 협의 및 작성<br>💠 SAP 연동 관련 발생 오류 분석 및 협의를 통한 문제 해결<br>💠 조직도 연동 관련 오류 원인 분석 및 협의<br>💠 IOS 앱 라이선스 갱신<br><br>2️⃣ **생체인증(FIDO) 도입 관련 연동 프로젝트**<br>💠 생체인증 업체와 API를 통한 연동 협의 및 개발<br>💠 조직도 연동 관련 오류 원인 분석 및 협의<br>💠 IOS 앱 라이선스 갱신<br><br>3️⃣ **문서이관용 JAVA 툴 작성**<br>💠 DB를 조회하여 특정 서버의 위치에 해당 파일을 전송하는 툴 작성|
 | 2021.09 ~ 2022.03 | 삼두정보기술<br>(6개월)      | **[ERP 솔루션 업체] 연구원 및 PM보조**<br>1️⃣ 대전 내 관공서 관련  ERP 차세대 프로젝트<br>💠 고객 문의 직접 대응 및 프로젝트 문서 관리<br>💠 문제 원인 분석 및 수정 배포 진행 |
@@ -427,10 +438,10 @@ body.portfolio-page button:hover ~ #cursor-dot {
 
 | 프로젝트              | 기간              | 기술 스택                                     |
 | --------------------- | ----------------- | --------------------------------------------- |
-| 포켓몬 게시판 | 2026.03           | Next.js, Firebase                             |
+| 포켓몬 게시판         | 2026.03           | Next.js, Firebase                             |
 | 일일 미로 게임        | 2025.09           | Next.js, cloud flare d1                       |
-| POKE-CODE             | 2024.06 ~ 2024.07 | React, Redux, TypeScript, Node.js, MySQL      |
-| Tarzan                | 2024.03           | Python, Flask, Jinja, JWT, BeautifulSoup, SSR |
+| POKE-CODE            | 2024.06 ~ 2024.07 | React, Redux, TypeScript, Node.js, MySQL      |
+| Tarzan               | 2024.03           | Python, Flask, Jinja, JWT, BeautifulSoup, SSR |
 | 하베스토리            | 2021.03 ~ 2021.10 | Spring Framework, JSP, JSTL, MySQL, jQuery    |
 | 게임예약사이트        | 2020.10 ~ 2020.12 | Spring Framework, JSP, JSTL, MySQL, jQuery    |
 
