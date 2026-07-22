@@ -10,8 +10,9 @@
 # `theme` 또는 `remote_theme`를 사용할지 결정하려면 문서를 검토하십시오.
 # https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/#installing-the-theme
 
-# theme                  : "minimal-mistakes-jekyll"
-remote_theme: "mmistakes/minimal-mistakes"
+# theme: "minimal-mistakes-jekyll"
+# 네트워크 VPN 문제 시 아래 주석해서 로컬 실행
+# remote_theme: "mmistakes/minimal-mistakes"
 minimal_mistakes_skin: "neon" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 
 # 사이트 설정
