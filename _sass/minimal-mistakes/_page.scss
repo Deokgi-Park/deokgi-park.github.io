@@ -1,9 +1,14 @@
 /* ==========================================================================
    SINGLE PAGE/POST
    ========================================================================== */
-// 스크롤 바 커스텀 2025.03.20 start
+// 스크롤 바 커스텀 2025.03.20 start (260826_PDG_테마 팔레트 기반으로 재정비)
 html {
-  width: calc(100vw - 8px);
+  scrollbar-gutter: stable; // calc(100vw - 8px) 하드코딩 대신 표준 속성으로 스크롤바 폭 예약
+}
+
+* {
+  scrollbar-width: thin; // Firefox
+  scrollbar-color: $primary-color transparent; // Firefox
 }
 
 ::-webkit-scrollbar {
@@ -14,21 +19,26 @@ html {
 ::-webkit-scrollbar-thumb {
   outline: none;
   border-radius: 8px;
-  background: -webkit-linear-gradient(
+  background: linear-gradient(
     75deg,
-    #d300a9,
-    // #b7e396,
-    // #ffeea9,
-    // #ffc19c,
-    #ff9bcd
+    mix(#000, $primary-color, 25%),
+    $primary-color,
+    mix(#fff, $primary-color, 30%)
   );
-  transition:
-    colorChange 0.5s ease,
-    transform 0.3s ease;
+  transition: background 0.25s ease;
+
+  &:hover {
+    background: linear-gradient(
+      75deg,
+      $primary-color,
+      mix(#fff, $primary-color, 30%),
+      mix(#fff, $primary-color, 50%)
+    );
+  }
 }
 
 ::-webkit-scrollbar-track {
-  background-color: rgba(0, 0, 0, 0);
+  background-color: transparent;
 }
 // 스크롤 바 커스텀 2025.03.20 end
 
@@ -379,12 +389,19 @@ body {
   margin-bottom: 8px;
   padding: 5px 10px;
   text-decoration: none;
-  border: 1px solid mix(#000, $border-color, 25%);
+  // 260826_PDG_인라인 코드 칩과 같은 핑크 아웃라인 배지로 통일
+  background: rgba($primary-color, 0.12);
+  border: 1px solid rgba($primary-color, 0.45);
   border-radius: $border-radius;
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease;
 
   &:hover {
     text-decoration: none;
     color: $link-color-hover;
+    background: rgba($primary-color, 0.22);
+    border-color: rgba($primary-color, 0.7);
   }
 }
 

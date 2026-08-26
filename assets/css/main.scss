@@ -24,6 +24,7 @@ search: false
 
 // 260331_PDG_사이드바_스크롤_숨김
 .sidebar {
+  scrollbar-width: none; // 260826_PDG_Firefox도 동일하게 숨김
   &::-webkit-scrollbar {
     display: none;
   }
@@ -44,41 +45,37 @@ blockquote {
 .page__content p {
   font-size: 0.75em;
 }
-
 // 260331_PDG_코드 폰트 수정
 code {
   font-family: "Galmuri14", Consolas, "Courier New", monospace;
-  font-size: 0.8em;
 }
 
 // #main > div.page__related > div > div:nth-child(2) > article > p:nth-child(3) > code:nth-child(1)
 
-// 260331_PDG_사이드바 코드 스타일 수정
+// 260826_PDG_코드 블록 터미널 타이틀바 팔레트
+$code-window-bg: mix($background-color, #000000, 55%);
+$code-titlebar-bg: mix($primary-color, $background-color, 12%);
+$code-dot-1: mix(#000000, $primary-color, 35%); // 가장 어두운 톤
+$code-dot-2: $primary-color; // 테마 기본 핑크
+$code-dot-3: mix(#ffffff, $primary-color, 40%); // 가장 밝은 톤
+
+// 260826_PDG_인라인 코드 칩: 채운 핑크 배경 대신 아웃라인 스타일 (맨 처음 개선했던 방식으로 복원)
+.page__content :not(pre) > code,
+.archive :not(pre) > code,
 .sidebar code,
 .archive__item code {
-  padding-top: 0.1rem;
-  padding-bottom: 0.1rem;
-  font-size: 0.8em;
-  background: $code-background-color;
-  border-radius: $border-radius;
+  display: inline-block; // 260826_PDG_여러 줄로 줄바꿈될 때 margin-bottom이 먹도록 (inline은 상하 margin 무시됨)
+  margin: 0 0.3em 0.3em 0;
+  padding: 0.05em 0.35em;
+  font-size: 0.85em;
+  color: mix(#fff, $primary-color, 15%);
+  background: rgba($primary-color, 0.12);
+  border: 1px solid rgba($primary-color, 0.45);
+  border-radius: 4px;
 
   &::before,
   &::after {
-    letter-spacing: -0.2em;
-    content: "\00a0"; /* non-breaking space*/
-  }
-}
-.archive :not(pre) > code {
-  padding-top: 0.1rem;
-  padding-bottom: 0.1rem;
-  font-size: 0.8em;
-  background: $code-background-color;
-  border-radius: $border-radius;
-
-  &::before,
-  &::after {
-    letter-spacing: -0.2em;
-    content: "\00a0"; /* non-breaking space*/
+    content: none; // 채운 배경용 비폭공백 트릭 비활성화 — 아웃라인 칩엔 불필요
   }
 }
 
@@ -129,4 +126,153 @@ hr {
   src: url("/assets/fonts/Galmuri14.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
+}
+
+// 260826_PDG_코드 블록 macOS 터미널 스타일 (팔레트 변수는 위쪽 인라인 코드 섹션으로 이동함)
+div.highlighter-rouge,
+figure.highlight {
+  margin: 1.5em 0;
+  padding-block-start: 2.25em;
+  background: $code-window-bg;
+  border: 1px solid rgba($primary-color, 0.35);
+  border-radius: 10px;
+  box-shadow:
+    0 8px 24px rgba(0, 0, 0, 0.35),
+    0 0 0 1px rgba($primary-color, 0.08);
+  transition: box-shadow 0.25s ease;
+  overflow: hidden;
+
+  &:hover {
+    box-shadow:
+      0 8px 28px rgba(0, 0, 0, 0.45),
+      0 0 0 1px rgba($primary-color, 0.35),
+      0 0 18px rgba($primary-color, 0.25);
+  }
+
+  // 타이틀바
+  &::before {
+    content: "";
+    position: absolute;
+    inset-block-start: 0;
+    inset-inline: 0;
+    height: 2.25em;
+    background: $code-titlebar-bg;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  }
+
+  // 신호등 점 (테마 핑크 명암 3단계)
+  &::after {
+    content: "";
+    position: absolute;
+    inset-block-start: 0.85em;
+    inset-inline-start: 1.1em;
+    width: 0.7em;
+    height: 0.7em;
+    border-radius: 50%;
+    background: $code-dot-1;
+    box-shadow:
+      1.3em 0 0 $code-dot-2,
+      2.6em 0 0 $code-dot-3;
+  }
+
+  > pre,
+  pre.highlight {
+    margin: 0;
+    padding: 1em;
+    // 260826_PDG_인라인 코드와 동일한 Galmuri14로 통일, 미지원 글자는 D2Coding으로 폴백
+    font-family: "Galmuri14", "D2Coding", Consolas, Monaco, "Lucida Console", monospace;
+  }
+}
+
+// 260826_PDG_구문 강조 팔레트 전면 개선
+// 기존 base16(neon)은 주석/문자열이 같은 초록이고, 식별자는 전부 한 가지 파랑이라 정보량이 낮았음.
+// 검정 배경 위에서 토큰 종류별로 명확히 구분되도록 재구성 (테마의 핑크 포인트와 충돌하지 않는 보색 위주)
+.highlight {
+  // 주석: 코드보다 한 톤 죽여서 뒤로 물러나 보이게
+  .c,
+  .cm,
+  .cp,
+  .c1,
+  .cs {
+    color: #7f8b98;
+    font-style: italic;
+  }
+
+  // 키워드(const, class, function, return, this...): 밝은 보라
+  .k,
+  .kc,
+  .kd,
+  .kp,
+  .kr {
+    color: #c792ea;
+  }
+
+  // 문자열 + 문자열 구분자(따옴표/백틱): 부드러운 그린
+  .s,
+  .s1,
+  .s2,
+  .sb,
+  .sc,
+  .sd,
+  .sh,
+  .si,
+  .sx,
+  .sr,
+  .ss,
+  .dl {
+    color: #98c379;
+  }
+
+  // 숫자/리터럴: 따뜻한 앰버
+  .m,
+  .mf,
+  .mh,
+  .mi,
+  .mo,
+  .il,
+  .l,
+  .ld {
+    color: #d19a66;
+  }
+
+  // 연산자: 시안 (핑크의 보색 계열이라 테마 포인트 컬러와 대비되면서도 안 튐)
+  .o,
+  .ow {
+    color: #56b6c2;
+  }
+
+  // 식별자(변수/함수/속성명): 밝은 블루 — 핑크 포인트와 짝을 이루는 네온 조합
+  .n,
+  .nx,
+  .na,
+  .nf,
+  .py,
+  .ni,
+  .nl,
+  .bp,
+  .nb {
+    color: #61afef;
+  }
+
+  // 클래스/타입/네임스페이스: 골드
+  .nc,
+  .nn,
+  .kt {
+    color: #e5c07b;
+  }
+
+  // 변수·상수·예외·에러: 소프트 레드 (테마 핑크와는 다른 톤이라 에러/경고만 눈에 띔)
+  .nv,
+  .no,
+  .nd,
+  .ne,
+  .err,
+  .gd {
+    color: #e06c75;
+  }
+
+  // 구두점(중괄호, 세미콜론 등): 살짝 낮춘 톤으로 시선이 색 있는 토큰에 먼저 가도록
+  .p {
+    color: #9099a3;
+  }
 }
