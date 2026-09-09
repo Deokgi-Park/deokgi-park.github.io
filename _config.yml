@@ -169,6 +169,7 @@ include:
   # Chrome DevTools가 로컬에서 요청하는 /.well-known/appspecific/com.chrome.devtools.json 404 로그를 줄이기 위해 포함
   - .well-known
 exclude:
+  - "_portfolio/핸디코어_경력기술서_초안.md"
   - "*.sublime-project"
   - "*.sublime-workspace"
   - vendor

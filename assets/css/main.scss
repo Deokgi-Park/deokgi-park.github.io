@@ -9,10 +9,12 @@ search: false
 @import "minimal-mistakes"; // main partials
 
 // 250212_PDG_TOC 사이드바 고정
-.toc {
-  @media screen and (min-width: 1025px) {
-    position: fixed;
-    top: 160px; // 260331_PDG_사이드바 위치 수정
+section.page__content.e-content > aside {
+  @media screen and (min-width: 1024px) {
+    position: sticky;
+    float: right;
+    top: 140px; // 260331_PDG_사이드바 위치 수정
+    margin-bottom: 0;
   }
 }
 
@@ -84,9 +86,9 @@ $code-dot-3: mix(#ffffff, $primary-color, 40%); // 가장 밝은 톤
   font-weight: bold;
 }
 
-/** 260407_줄바꿈용 수평선 마진 변경 */
+/** 260407_줄바꿈용 수평선 패딩 변경 */
 hr {
-  margin: 1em 0 3em;
+  padding: 1em 0 3em;
 }
 // 가위 모양 아이콘 제거, 필요 시 아래 코드 수정
 // hr:before {

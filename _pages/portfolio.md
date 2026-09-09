@@ -1302,6 +1302,7 @@ date: 2026-03-31
                 <li>부산 공사 프로젝트 테스트·패치·배포, WEB/WAS 운영 지원</li>
                 <li>자사 솔루션의 Kubernetes 배포 환경 검증</li>
               </ul>
+              <a class="project-link" href="/portfolio/handycore-ps/" style="display: inline-block; margin-top: 6px;">PS팀 프로젝트 상세 보기 →</a>
             </div>
           </article>
           <article class="timeline-item reveal">
@@ -1328,6 +1329,7 @@ date: 2026-03-31
                 <li>생체인증(FIDO), SAP, 조직도 시스템 연동 오류 분석 및 협의</li>
                 <li>DB 비교로 문서를 타 서버로 전송하는 Java 툴 개발</li>
               </ul>
+              <a class="project-link" href="/portfolio/handycore-cs/" style="display: inline-block; margin-top: 6px;">CS팀 유지보수 상세 보기 →</a>
             </div>
           </article>
           <article class="timeline-item reveal">
